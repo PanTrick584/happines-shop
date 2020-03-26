@@ -4,6 +4,7 @@
     --primary-color: #52145c;
     --secondary-color: #43f0cd;
     --font-familly: "Monoton", cursive; 
+    --click-color: #6b1649;
 }
 
 *{
@@ -56,7 +57,7 @@ body{
 
 
 /* Main */
-.container{
+.main-container{
     /* display: flex; */
     display: none;
     flex-direction: column;
@@ -79,11 +80,12 @@ header h1{
 .header-list-container{
     margin-left: auto;
 }
-header ul button{
+.header-button{
     cursor: pointer;
     width: 60px;
     height: 60px;
     margin-right: 15px;
+    margin-bottom: 15px;
     padding: 10px 10px;
     font-size: 1.4rem;
     color: var(--secondary-color);
@@ -91,33 +93,96 @@ header ul button{
     background-color: var(--primary-color);
 }
 
-header ul button:hover{
+.header-button:hover{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border: 4px dotted var(--primary-color);
-
 }
+header ul button:focus{
+    background-color: var(--click-color);
+    border: 4px dotted var(--primary-color);
+    outline: 0;
+}
+
 /* Main */
 main{
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 main h1{
     font-size: 4rem;
     font-weight: 400;
     color: var(--secondary-color);
 }
 .elements-container{
+    
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    max-width: 100%;
 }
 
-.elements-container div{
+.happy-element{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-right: 20px;
+    margin-bottom: 20px;
     border: 5px dotted var(--secondary-color);
-    width: 300px;
-    height: 300px;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    font-family: var(--font-familly);
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+.happy-element:focus{
+    background-color: var(--click-color);
+    outline: 0;
+}
+.happy-element:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 5px dotted var(--primary-color);
+}
+
+.happy-element h1{
+    font-size: 1.8rem;
+}
+.happy-element h1:hover{
+    color: var(--primary-color);
+}
+
+.happy-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 15px 0;
+}
+
+.add-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-element-input{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    border: 3px dotted var(--secondary-color);
+    text-align: center;
+    font-family: var(--font-familly);
+    font-size: 0.6rem;
 }
