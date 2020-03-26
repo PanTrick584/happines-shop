@@ -2,11 +2,11 @@ var domElement = {};
 
 domElement.mainContainer = document.getElementById('main-container');
 domElement.startContainer = document.getElementById('start-container');
-const happySpans = document.querySelectorAll('#start-header span');
-const container = document.getElementById('elements-container')
-const addElement = document.getElementById('add-element')
+domElement.happySpans = document.querySelectorAll('#start-header span');
+domElement.elementsContainer = document.getElementById('elements-container')
+domElement.addElement = document.getElementById('add-element')
 
-const enterButton = document.getElementById('enter-button')
+domElement.enterButton = document.getElementById('enter-button')
 
 
 
@@ -25,40 +25,38 @@ function showShop(){
 }
 
 function happinesEntrance(){
-    console.log(happines)
-    happines.forEach( el => {
-        let button = document.createElement('button')
-        button.innerText = el.name;
-        button.id = el.id;
-        button.setAttribute('class', 'happy-element')
-        container.insertBefore(button, addElement)
-        console.log(button)
 
+    happines.forEach( el => {
+        domElement.buttonHappines = document.createElement('button')
+        domElement.buttonHappines.innerText = el.name;
+        domElement.buttonHappines.id = el.id;
+        domElement.buttonHappines.setAttribute('class', 'happy-element')
+        domElement.elementsContainer.insertBefore(domElement.buttonHappines, domElement.addElement)
     })
 
 }
 
 function addHappines(){
-    let happyDiv = document.createElement('div')
-    let inputName = document.createElement('input')
-    let buttonSubmit = document.createElement('button')
+    domElement.happyDiv = document.createElement('div')
+    domElement.inputName = document.createElement('input')
+    domElement.buttonSubmit = document.createElement('button')
 
 
-    buttonSubmit.classList.add('header-button')
-    inputName.classList.add('add-element-input')
-    inputName.setAttribute('placeholder', "happines?")
+    domElement.buttonSubmit.classList.add('header-button')
+    domElement.inputName.classList.add('add-element-input')
+    domElement.inputName.setAttribute('placeholder', "happines?")
 
-    happyDiv.setAttribute('class', "happyDiv")
-    happyDiv.appendChild(inputName);
-    happyDiv.appendChild(buttonSubmit);
+    domElement.happyDiv.setAttribute('class', "happyDiv")
+    domElement.happyDiv.appendChild(domElement.inputName);
+    domElement.happyDiv.appendChild(domElement.buttonSubmit);
 
 
 
-    addElement.classList.add('add-element')
-    addElement.appendChild(happyDiv)
-    addElement.removeEventListener('click', addHappines);
+    domElement.addElement.classList.add('add-element')
+    domElement.addElement.appendChild(domElement.happyDiv)
+    domElement.addElement.removeEventListener('click', addHappines);
 
-    buttonSubmit.addEventListener('click', updateHappines)
+    domElement.buttonSubmit.addEventListener('click', updateHappines)
 }
 
 function updateHappines(){
@@ -68,8 +66,8 @@ function updateHappines(){
 };
 
 //Events
-enterButton.addEventListener('click', showShop)
-addElement.addEventListener('click', addHappines)
+domElement.enterButton.addEventListener('click', showShop)
+domElement.addElement.addEventListener('click', addHappines)
 
 // // For some fun later
 // happySpans.forEach(span => {
@@ -78,3 +76,4 @@ addElement.addEventListener('click', addHappines)
 //     })
 
 // })
+console.log(domElement)
