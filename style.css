@@ -118,15 +118,20 @@ main h1{
     font-weight: 400;
     color: var(--secondary-color);
 }
+
+/* main container */
 .elements-container{
-    
-    display: flex;
-    flex-direction: row;    
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center; 
     max-width: 100%;
     margin: 0 80px;
+}
+
+/* element with all buttons */
+.happyButtonsContainer {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
 }
 
 .happy-element{
