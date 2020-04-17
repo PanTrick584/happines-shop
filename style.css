@@ -5,6 +5,7 @@
     --secondary-color: #43f0cd;
     --font-familly: "Monoton", cursive; 
     --click-color: #6b1649;
+    --border-dotted: 5px dotted var(--secondary-color);
 }
 
 *{
@@ -52,7 +53,7 @@ body{
 .enter-button:hover{
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border: 5px dotted var(--secondary-color)
+    border: var(--border-dotted)
 }
 
 
@@ -125,6 +126,7 @@ main h1{
     justify-content: center;
     align-items: center; 
     max-width: 100%;
+    margin: 0 80px;
 }
 
 .happy-element{
@@ -169,13 +171,13 @@ main h1{
     margin: 0 0 15px 0;
 }
 
-.add-element{
+/* .add-element{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
+} */
+/* 
 .add-element-input{
     color: var(--secondary-color);
     background-color: var(--primary-color);
@@ -185,4 +187,67 @@ main h1{
     text-align: center;
     font-family: var(--font-familly);
     font-size: 0.6rem;
+} */
+
+/* Add element container */
+.create-element{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+    border: var(--border-dotted);
+    padding: 90px;
+    text-align: center;
+    font-family: var(--font-familly);
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.element button{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #2980b9;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: var(--border-dotted);
+    font-family: var(--font-familly);
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.element button:active{
+    transform: scale(0.98);
+}
+
+.element button:focus{
+    outline: none;
+}
+
+.element input{
+    padding: 20px 0;
+    background-color: var(--secondary-color);
+    border: var(--border-dotted);
+    font-family: var(--font-familly);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.element input:focus{
+    background-color: var(--primary-color);
+    outline: 0;
 }
