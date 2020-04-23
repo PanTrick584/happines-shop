@@ -28,24 +28,56 @@ var happines = [
 ]
 
 var happinesElements = [
-    {id: 'sweets',
+    {
+        id: 'sweets',
         sweets: [
             {name: 'chocolate', price: 8},
             {name: 'candy', price: 2},
-            {name: 'cookie', price: 3}
-
+            {name: 'cookie', price: 3},
+            {name: 'Icecream', price: 2}
         ]
-
-       
     },
-    {id: 'party',
-    
+    {
+        id: 'party',
+        party: [
+            {name: 'Disco', price: 60},
+            {name: 'Festival', price: 120},
+            {name: 'Home Dancce', price: 7},
+            {name: 'Cameral Concert', price: 15},
+            {name: 'Singing under shower', price: 2.3},
+            {name: 'Acoustic plener concert', price: 8}
+        ]
+    },
+    {
+        id: 'music',
+        music: [
+            {name: 'Rock', price: 12},
+            {name: 'Metal', price: 12},
+            {name: 'Blues', price: 12},
+            {name: 'Jazz', price: 12},
+            {name: 'Folk', price: 12},
+            {name: 'Pop', price: 12},
+            {name: 'Regge', price: 12},
+            {name: 'Ska', price: 12},
+            {name: 'Acoustic Covers of Everything', price: 12},
+            {name: 'Dom Metal', price: 12}
+        ]
+    },
+    {
+        id: 'people',
+        people: [
+            {name: 'Girlfriend', price: 'infinity'},
+            {name: 'Boyfriend', price: 'some sex'},
+            {name: 'Friend', price: 'some time'},
+            {name: 'Domina', price: 1200},
+            {name: 'Annoying Neighbour', price: 'free'}
+        ]
     }
 ]
 
 //Functions
 
-// Event to show entire shop after click 
+// Function to show entire shop after click 
 function showShop(){
     startContainer.style.display = "none"
     mainContainer.style.display = "flex";
@@ -79,7 +111,9 @@ function createShopStuff(button) {
         if(button.id === el.id){
             el[el.id].forEach(el => {
                 console.log(el)
-                shopStuff.innerHTML += el.name;
+                let shopStuffEl = document.createElement('div');
+                shopStuffEl.innerHTML += el.name;
+                shopStuff.appendChild(shopStuffEl);
             })
         }
     })
