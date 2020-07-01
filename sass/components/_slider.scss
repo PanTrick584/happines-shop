@@ -1,0 +1,42 @@
+.slider {
+
+    background-color: rgba($color-orange, .7);
+    height: 100%;
+    &__box {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size-middle;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text {
+        text-align: center;
+        width: 100%;
+    }
+
+    &__btn {
+        padding: 3rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $color-blue;
+        margin: 1rem;
+        font-size: $font-size-middle;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover{
+            transform: translateY(-1rem);
+        }
+       
+        &:active {
+            transform: scale(1.1);
+        }
+        
+    }
+
+   
+}

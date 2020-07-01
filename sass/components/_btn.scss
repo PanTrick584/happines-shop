@@ -1,0 +1,9 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

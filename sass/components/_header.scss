@@ -1,0 +1,24 @@
+.header{
+
+    height: $main-height;
+    background-color: $color-yellow;
+    color: $color-granate;
+    box-shadow: .5rem 1rem 1rem darken($color-granate, 0.3);
+
+    &__h1{
+
+        height: 50%;
+        width: 50%;
+        font-size: 10rem;
+        
+    }
+    &__picture{
+        height: 40%;
+        border: 3px solid $color-granate;
+        margin: $margin-small;
+        // filter: grayscale(100%);
+        background-image: linear-gradient(rgba($color-granate, 0.8), rgba($color-granate, 0.8)), url("https://c.pxhere.com/photos/28/c1/friends_comfort_care_cheer_up_soothe_friendship_depression_soothing-922392.jpg!d");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

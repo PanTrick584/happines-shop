@@ -1,0 +1,9 @@
+.section__slider {
+
+    height: $main-height;
+    background-image: url("https://c.pxhere.com/photos/ab/45/architecture_modern_architecture_modern_building_design_facade_urban_d_sseldorf-1162464.jpg!d");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $color-blue;
+    box-shadow: .5rem 1rem 1rem darken($color-blue, 0.3);
+}

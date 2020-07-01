@@ -1,4 +1,7 @@
-
+// DOM ELEMENTS
+const sliderTextDOM = document.getElementById("sliderText");
+const sliderBtnDOM = document.querySelectorAll(".slider__btn");
+// OLD
 const mainContainer = document.getElementById('main-container');
 const startContainer = document.getElementById('start-container');
 const elementsContainer = document.getElementById('elements-container');
@@ -11,6 +14,9 @@ const createElement = document.getElementById('create-element');
 
 const createInput = document.querySelector('.create-element input');
 const createButton = document.querySelector('.create-element button');
+
+// Spans from first main page
+const spanHighlights = document.querySelectorAll('.start-header span')
 
 // Create DOM elements
 const happyButtonsContainer = document.createElement('div');
@@ -77,12 +83,68 @@ var happinesElements = [
 
 //Functions
 
+// SLIDER
+
+// slider sentences container
+const smartSentences = {
+    one: { id: 1,
+     name: "are you happy?"
+     },
+     two: {
+         id: 2,
+         name: "sometimes its just... "
+     },
+     three: {
+         id: 3,
+         name: "the matter of choice"
+     },
+     four: {
+         id: 4,
+         name: " so, now?"
+     }
+ }
+// slider counter
+let count = 0;
+// slider function
+function slider() {
+
+     count++;
+        for( key in smartSentences) {
+            if(count === smartSentences[key].id) {
+                sliderTextDOM.innerHTML = smartSentences[key].name;
+            }
+        }
+
+        if(count === 4) {
+            count = 0;
+        }
+        
+};
+
 // Function to show entire shop after click 
 function showShop(){
     startContainer.style.display = "none"
     mainContainer.style.display = "flex";
     happinesEntrance();
 }
+
+// Loop throu first page spans to highlight them
+function spanColorChanger() {
+    Array.from(spanHighlights, span => {
+       if(span.style.color !== 'red'){
+        setInterval(()=>{
+            span.style.color = 'red';
+            // spanColorChanger();
+        }, 1500)
+       } else {
+        setInterval(()=>{
+            span.style.color = 'red';
+        }, 1500)
+        // spanColorChanger();
+       }
+    })
+}
+spanColorChanger();
 
 // Loop for creare elements form 'happy' array
 function happinesEntrance(){
@@ -137,6 +199,14 @@ function openSection() {
 }
 
 //Events
+sliderBtnDOM.forEach( btn => {
+    console.log(btn)
+    btn.addEventListener("click", slider)
+})
+// document loaded
+window.addEventListener('DOMContentLoaded', ()=>{
 
-// Enter to shop
-enterButton.addEventListener('click', showShop)
+    slider();
+    
+
+})
