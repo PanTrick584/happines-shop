@@ -5,13 +5,49 @@
     color: $color-granate;
     box-shadow: .5rem 1rem 1rem darken($color-granate, 0.3);
 
-    &__h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        height: 50%;
-        width: 50%;
-        font-size: 10rem;
-        
+    &__container{        
+        margin: 3rem;
+
+        display: flex;
+        justify-content: space-between;
     }
+    &__h1 {
+        width: 50%;
+        height: 100%;
+    }
+
+    &__ul {
+        padding-top: 2rem;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    &__li {
+        padding: 1rem;
+        margin: .5rem;
+        border: 5px solid $color-granate;
+        cursor: pointer;
+    }
+
+    &__link {
+        
+
+        &-icon {
+            width: 3rem;
+            height: 3rem;
+            fill: $color-granate;
+        }
+    }
+
+    
+
     &__picture{
         height: 40%;
         border: 3px solid $color-granate;

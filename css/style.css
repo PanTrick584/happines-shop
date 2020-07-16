@@ -31,8 +31,10 @@ body {
 .heading-one {
   font-size: 7rem;
   text-align: left;
-  margin: 0 3rem;
   word-spacing: 1.2rem; }
+  @media (max-width: 37.5em) {
+    .heading-one {
+      font-size: 5rem; } }
 
 .u-margin-small {
   margin-bottom: 3rem; }
@@ -47,11 +49,32 @@ body {
   height: 100rem;
   background-color: #ffbe0b;
   color: #8338ec;
-  box-shadow: 0.5rem 1rem 1rem #8237ec; }
+  box-shadow: 0.5rem 1rem 1rem #8237ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .header__container {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between; }
   .header__h1 {
-    height: 50%;
     width: 50%;
-    font-size: 10rem; }
+    height: 100%; }
+  .header__ul {
+    padding-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start; }
+  .header__li {
+    padding: 1rem;
+    margin: .5rem;
+    border: 5px solid #8338ec;
+    cursor: pointer; }
+  .header__link-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: #8338ec; }
   .header__picture {
     height: 40%;
     border: 3px solid #8338ec;
@@ -92,6 +115,20 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer; }
+
+.lightbox {
+  height: 100rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  background-color: #eee; }
+  .lightbox__header {
+    text-align: left;
+    font-size: 7rem;
+    width: 30%;
+    margin: 3rem;
+    color: #fff; }
+  .lightbox__btn:link, .lightbox__btn:visited {
+    text-decoration: none;
+    color: #fff; }
 
 .section__slider {
   height: 100rem;
