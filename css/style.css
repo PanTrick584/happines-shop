@@ -117,18 +117,59 @@ body {
   cursor: pointer; }
 
 .lightbox {
+  position: relative;
   height: 100rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
-  background-color: #eee; }
+  background-color: #eee;
+  display: flex; }
   .lightbox__header {
     text-align: left;
     font-size: 7rem;
-    width: 30%;
     margin: 3rem;
-    color: #fff; }
+    color: #8338ec; }
   .lightbox__btn:link, .lightbox__btn:visited {
     text-decoration: none;
     color: #fff; }
+  .lightbox__container {
+    margin: 0 auto; }
+  .lightbox__box {
+    display: flex;
+    flex-wrap: wrap; }
+  .lightbox__img {
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    border: 1.5rem solid #eee; }
+    .lightbox__img-popup {
+      width: 100%;
+      border: none; }
+    .lightbox__img-cursor {
+      cursor: auto; }
+  .lightbox__popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 134, 255, 0.7); }
+    .lightbox__popup-box {
+      height: 100%;
+      display: flex;
+      flex-direction: column; }
+    .lightbox__popup-screen {
+      margin: 2rem; }
+    .lightbox__popup-queue {
+      margin: 2rem;
+      display: flex;
+      justify-content: space-between; }
+      .lightbox__popup-queue--el {
+        margin: 0 1rem; }
+  .lightbox__button {
+    position: absolute;
+    cursor: pointer;
+    top: 3rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem; }
 
 .section__slider {
   height: 100rem;
@@ -137,3 +178,6 @@ body {
   background-repeat: no-repeat;
   color: #3a86ff;
   box-shadow: 0.5rem 1rem 1rem #3885ff; }
+
+.section__lightbox {
+  margin-top: 3rem; }

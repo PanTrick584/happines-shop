@@ -10,99 +10,81 @@
 </head>
 <body>
 
-    <header class="header u-margin-small" id="header">
-        <div class="header__container">
-            <h1 class="header__h1 heading-one">there is not much things</h1>
-            <ul class="header__ul">
-                <li class="header__li">
-                    <a href="#" class="header__link">
-                        <svg class="header__link-icon">
-                            <use xlink:href="img/sprite.svg#icon-home
-                            "></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="#" class="header__link">
-                        <svg class="header__link-icon">
-                            <use xlink:href="img/sprite.svg#icon-magnifying-glass
-                            "></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="#" class="header__link">
-                        <svg class="header__link-icon">
-                            <use xlink:href="img/sprite.svg#icon-info
-                            "></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="#" class="header__link">
-                        <svg class="header__link-icon">
-                            <use xlink:href="img/sprite.svg#icon-emoji-happy
-                            "></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="header__picture">PICTURE
-        </div>
-    </header>
-
-    <main>
-        <section class="section__slider">
-            <div class="slider" id="slider">
-                <div class="slider__box">
-                    <button class="btn slider__btn">&lt;</button>
-                    <h1 class="slider__text heading-one" id="sliderText">are you happy?</h1>
-                    <button class="btn slider__btn">&gt;</button>
-                </div>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header u-margin-small" id="header">
+            <div class="header__container">
+                <h1 class="header__h1 heading-one">there is not much things</h1>
+                <ul class="header__ul">
+                    <li class="header__li">
+                        <a href="#" class="header__link">
+                            <svg class="header__link-icon">
+                                <use xlink:href="img/sprite.svg#icon-home
+                                "></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="#" class="header__link">
+                            <svg class="header__link-icon">
+                                <use xlink:href="img/sprite.svg#icon-magnifying-glass
+                                "></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="#" class="header__link">
+                            <svg class="header__link-icon">
+                                <use xlink:href="img/sprite.svg#icon-info
+                                "></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="#" class="header__link">
+                            <svg class="header__link-icon">
+                                <use xlink:href="img/sprite.svg#icon-emoji-happy
+                                "></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <section class="section__lightbox">
-            <div class="lightbox">
-                <h1 class="lightbox__header" id="start-header">
-                    do you need some happines ? 
-                    <a href="#" class="lightbox__btn"> =>> </a>
-                </h1>
-                <div class="lightbox__container">
-                    <div class="lightbox__container-box">
-                    </div>
-                    <div class="lightbox__container-menu"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="start-container" id="start-container">
-            
-            <button class="enter-button" id="enter-button">welcome</button>
-    </div>
-
-    <div class="main-container" id="main-container">
-        <header id="header">
-            <h1>where do you want to start?</h1>
-            <div class="header-list-container" id="header-list-container">
-                    <ul class="header-list">
-                        <button class="header-button" id="home"><i class="fas fa-home"></i></button>
-                        <button class="header-button" id="about"><i class="fas fa-info"></i></button>
-                        <button class="header-button" id="search"><i class="fas fa-search"></i></button>
-                        <button class="header-button" id="random"><i class="fas fa-random"></i></button>
-                    </ul>
+            <div class="header__picture">PICTURE
             </div>
         </header>
-        <main id="happines-elements">
-            <h1>what kind of happines <br /> you are looking for?</h1>
-            <div class="elements-container" id="elements-container">                   
+        <!-- END OF HEADER -->
+        <!-- MAIN -->
+        <main>
+             <!-- SECTION SLIDER -->
+            <section class="section__slider">
+                <div class="slider" id="slider">
+                    <div class="slider__box">
+                        <button class="btn slider__btn">&lt;</button>
+                        <h1 class="slider__text heading-one" id="sliderText">are you happy?</h1>
+                        <button class="btn slider__btn">&gt;</button>
+                    </div>
+                </div>
+            </section>
+            <!-- END OF SECTION SLIDER -->
+            <!-- SECTION LIGHTBOX -->
+            <section class="section__lightbox">
+                <div class="lightbox">
+                    <div class="lightbox__popup" id="popup"></div>
+                    <h1 class="lightbox__header" id="start-header">
+                        do you need some love ? 
+                    </h1>
+                    <div class="lightbox__container" id="lightbox">
 
-            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END OIF SECTION LIGHTBOX -->
         </main>
-       
+        <!-- END OF MAIN -->
     </div>
+    <!-- END OF CONTAINER -->
+    
 
     <script src="index.js"></script>
 </body>
