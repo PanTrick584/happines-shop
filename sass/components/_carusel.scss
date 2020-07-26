@@ -1,0 +1,48 @@
+.carusel {
+    
+    height: 100%;
+    // width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__btn{
+
+        height: 100%;
+        width: 50%;
+        background-color: rgba($color-blue, .3);
+        border: none;
+
+        font-size: 5rem;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: rgba($color-granate, .3);
+        }
+    }
+    &__dots{
+        align-self: flex-end;
+        margin-bottom: 5rem;
+        width: 18rem;
+        height: 8rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-dot{
+            height: 2rem;
+            width: 2rem;
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin: 0 .5rem;
+        }
+    }
+}

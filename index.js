@@ -1,20 +1,25 @@
 // DOM ELEMENTS
+//slider
 const sliderTextDOM = document.getElementById("sliderText");
 const sliderBtnDOM = document.querySelectorAll(".slider__btn");
 // lightbox
 const lightboxDOM = document.getElementById("lightbox");
 const popupDOM = document.getElementById("popup");
+//carusel
+const caruselDOM = document.getElementById("carusel");
+const caruselBtnAddDOM = document.getElementById("caruselBtnAdd");
+const caruselBtnRemoveDOM = document.getElementById("caruselBtnRemove");
 
 //Functions
 // SLIDER
 // slider sentences container
 const smartSentences = {
     one: { id: 1,
-     name: "are you happy?"
+     name: "are you happy ?"
      },
      two: {
          id: 2,
-         name: "sometimes its just... "
+         name: "some times its just... "
      },
      three: {
          id: 3,
@@ -22,7 +27,7 @@ const smartSentences = {
      },
      four: {
          id: 4,
-         name: " so, now?"
+         name: " so, now ?"
      }
  }
 // slider counter
@@ -119,20 +124,65 @@ function createImgs() {
 
     photos.forEach( photo => {
         box.innerHTML += 
-        `<img class="lightbox__img" src="${photo}"></img>`;
+        `<div class="lightbox__box-item"><img class="lightbox__img" src="${photo}"></img></div>`;
     })
     lightboxDOM.appendChild(box);
     grabImages();
 }
+//CARUSEL
+
+function setCaruselBackground() {
+
+    let num = 0;
+    let dots = document.querySelectorAll(".carusel__dots-dot");
+    let dotsArray = Array.from(dots); 
+    let dotsID = dotsArray.map( (dot, id) => {
+         dot.dataset.id = id;
+         return dot;
+    });
+    caruselBtnAddDOM.addEventListener("click", () => {
+        if( num < 5 ) {
+            num++;
+            changeDot(num);
+            changeBackground(num);
+        }
+        
+    })
+    caruselBtnRemoveDOM.addEventListener("click", () =>{
+        if( num > 0 ) {
+            num--;
+            changeDot(num)
+            changeBackground(num);
+        }
+        
+    });
+    const changeBackground = (num) => photos.forEach( (photo, id) => {
+        if(id === num) {
+            caruselDOM.style.backgroundImage = `url(${photo})`;
+        }
+    });
+    const changeDot = (num) => dots.forEach( (dot, id) => {
+        dot.style.backgroundColor = "transparent";
+        if(id === num) {
+            dot.style.backgroundColor = "white";
+        }
+    })
+    changeBackground(num);
+    changeDot(num);
+}
 
 //Events
+//slider
 sliderBtnDOM.forEach( btn => {
+
     btn.addEventListener("click", slider)
 })
+//carusel
+
 // document loaded
 window.addEventListener('DOMContentLoaded', ()=>{
 
     slider();
     createImgs();
-
+    setCaruselBackground();
 })

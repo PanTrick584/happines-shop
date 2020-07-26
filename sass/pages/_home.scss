@@ -1,12 +1,63 @@
+.container {
+
+    @include respond(tab-land) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    @include respond(standart-screen) {
+        flex-wrap: nowrap;
+    }
+}
+
 .section__slider {
+
+    margin-top: 3rem;
 
     height: $main-height;
     background-image: url("https://c.pxhere.com/photos/ab/45/architecture_modern_architecture_modern_building_design_facade_urban_d_sseldorf-1162464.jpg!d");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: $color-blue;
     box-shadow: .5rem 1rem 1rem darken($color-blue, 0.3);
+
+    @include respond(tab-land) {
+        flex: 0 0 45%;
+        margin-top: 0;
+        margin-left: 3rem;
+    }
+    @include respond(standart-screen) {
+        flex: 0 0 20%;
+        margin-top: 0;
+        margin-left: 3rem;
+    }
 }
 .section__lightbox {
+    height: $main-height;
     margin-top: 3rem;
+
+    @include respond(tab-land) {
+        flex: 0 0 45%;
+    }
+    @include respond(standart-screen) {
+        flex: 0 0 20%;
+        margin-top: 0;
+        margin-left: 3rem;
+    }
+}
+.section__carusel {
+    margin-top: 3rem;
+    height: $main-height;
+
+    @include respond(tab-land) {
+        flex: 0 0 45%;
+        margin-left: 3rem;
+    }
+    @include respond(standart-screen) {
+        flex: 0 0 20%;
+        margin-top: 0;
+        // margin-left: 3rem;
+    }
 }

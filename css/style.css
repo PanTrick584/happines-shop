@@ -7,34 +7,25 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 37.5%; } }
-  @media (min-width: 112.5em) {
+  @media (min-width: 39.1em) {
     html {
       font-size: 75%; } }
+  @media (min-width: 64em) {
+    html {
+      font-size: 87.5%; } }
+  @media (min-width: 90em) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 125%; } }
 
 body {
   font-family: 'Monoton', cursive;
-  font-weight: 400;
   line-height: 1.7;
   color: #777;
   padding: 3rem;
   box-sizing: border-box; }
-
-.heading-one {
-  font-size: 7rem;
-  text-align: left;
-  word-spacing: 1.2rem; }
-  @media (max-width: 37.5em) {
-    .heading-one {
-      font-size: 5rem; } }
 
 .u-margin-small {
   margin-bottom: 3rem; }
@@ -46,63 +37,98 @@ body {
   margin-bottom: 7rem; }
 
 .header {
-  height: 100rem;
+  height: 90vh;
   background-color: #ffbe0b;
   color: #8338ec;
   box-shadow: 0.5rem 1rem 1rem #8237ec;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media (min-width: 64em) {
+    .header {
+      flex: 0 0 45%; } }
+  @media (min-width: 90em) {
+    .header {
+      flex: 0 0 20%; } }
   .header__container {
-    margin: 3rem;
-    display: flex;
-    justify-content: space-between; }
+    margin: 2rem; }
+    @media (min-width: 39.1em) {
+      .header__container {
+        margin: 3.5rem; } }
   .header__h1 {
-    width: 50%;
-    height: 100%; }
+    font-size: 3rem;
+    font-weight: 100; }
+    @media (min-width: 39.1em) {
+      .header__h1 {
+        width: 80%; } }
+    @media (min-width: 64em) {
+      .header__h1 {
+        width: 60%;
+        font-size: 3rem; } }
   .header__ul {
     padding-top: 2rem;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start; }
+    justify-content: center; }
+    @media (min-width: 26.56em) {
+      .header__ul {
+        justify-content: left; } }
   .header__li {
-    padding: 1rem;
+    padding: .5rem;
     margin: .5rem;
-    border: 5px solid #8338ec;
+    border: 2px solid #8338ec;
     cursor: pointer; }
   .header__link-icon {
-    width: 3rem;
-    height: 3rem;
+    height: 1.5rem;
+    width: 1.5rem;
     fill: #8338ec; }
   .header__picture {
-    height: 40%;
+    height: 50%;
     border: 3px solid #8338ec;
-    margin: 3rem;
+    margin: 2rem;
     background-image: linear-gradient(rgba(131, 56, 236, 0.8), rgba(131, 56, 236, 0.8)), url("https://c.pxhere.com/photos/28/c1/friends_comfort_care_cheer_up_soothe_friendship_depression_soothing-922392.jpg!d");
     background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat; }
+    @media (min-width: 39.1em) {
+      .header__picture {
+        margin: 3.5rem; } }
 
 .slider {
   background-color: rgba(251, 86, 7, 0.7);
   height: 100%; }
   .slider__box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   .slider__text {
     text-align: center;
-    width: 100%; }
+    line-height: 10rem;
+    width: 80%;
+    font-size: 3rem;
+    font-weight: 100; }
+    @media (min-width: 26.56em) {
+      .slider__text {
+        font-size: 3rem; } }
+    @media (min-width: 39.1em) {
+      .slider__text {
+        font-size: 5rem;
+        line-height: 8rem; } }
+    @media (min-width: 90em) {
+      .slider__text {
+        font-size: 3rem;
+        line-height: 6rem; } }
   .slider__btn {
-    padding: 3rem;
+    justify-self: right;
+    padding: 1rem;
     border: none;
     outline: none;
     background-color: transparent;
     color: #3a86ff;
-    margin: 1rem;
+    margin: 4rem 0;
     font-size: 5rem;
     cursor: pointer;
     transition: all .2s; }
@@ -117,16 +143,33 @@ body {
   cursor: pointer; }
 
 .lightbox {
+  height: 100%;
   position: relative;
-  height: 100rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
   background-color: #eee;
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  @media (min-width: 39.1em) {
+    .lightbox {
+      display: flex;
+      flex-direction: row; } }
+  @media (min-width: 90em) {
+    .lightbox {
+      flex-direction: column; } }
   .lightbox__header {
-    text-align: left;
-    font-size: 7rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
     margin: 3rem;
     color: #8338ec; }
+    @media (min-width: 26.56em) {
+      .lightbox__header {
+        font-size: 4rem; } }
+    @media (min-width: 64em) {
+      .lightbox__header {
+        font-size: 3rem; } }
   .lightbox__btn:link, .lightbox__btn:visited {
     text-decoration: none;
     color: #fff; }
@@ -134,12 +177,33 @@ body {
     margin: 0 auto; }
   .lightbox__box {
     display: flex;
-    flex-wrap: wrap; }
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 26.56em) {
+      .lightbox__box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; } }
+    @media (min-width: 39.1em) {
+      .lightbox__box {
+        align-items: center;
+        justify-content: center; } }
+    .lightbox__box-item {
+      flex: 0 0 30%; }
   .lightbox__img {
+    width: 80%;
     cursor: pointer;
-    width: 50%;
-    height: 100%;
-    border: 1.5rem solid #eee; }
+    background-position: center;
+    background-size: 100%; }
+    @media (min-width: 26.56em) {
+      .lightbox__img {
+        max-height: auto;
+        margin: 3rem; } }
+    @media (min-width: 39.1em) {
+      .lightbox__img {
+        margin: .5rem; } }
     .lightbox__img-popup {
       width: 100%;
       border: none; }
@@ -150,12 +214,14 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(58, 134, 255, 0.7); }
+    background-color: rgba(131, 56, 236, 0.9); }
     .lightbox__popup-box {
       height: 100%;
       display: flex;
       flex-direction: column; }
     .lightbox__popup-screen {
+      background-position: center;
+      background-size: 100%;
       margin: 2rem; }
     .lightbox__popup-queue {
       margin: 2rem;
@@ -171,13 +237,90 @@ body {
     width: 5rem;
     height: 5rem; }
 
+.carusel {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between; }
+  .carusel__btn {
+    height: 100%;
+    width: 50%;
+    background-color: rgba(58, 134, 255, 0.3);
+    border: none;
+    font-size: 5rem; }
+    .carusel__btn:active, .carusel__btn:focus {
+      outline: none; }
+    .carusel__btn:hover {
+      background-color: rgba(131, 56, 236, 0.3); }
+  .carusel__dots {
+    align-self: flex-end;
+    margin-bottom: 5rem;
+    width: 18rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .carusel__dots-dot {
+      height: 2rem;
+      width: 2rem;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin: 0 .5rem; }
+
+@media (min-width: 64em) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; } }
+
+@media (min-width: 90em) {
+  .container {
+    flex-wrap: nowrap; } }
+
 .section__slider {
-  height: 100rem;
+  margin-top: 3rem;
+  height: 90vh;
   background-image: url("https://c.pxhere.com/photos/ab/45/architecture_modern_architecture_modern_building_design_facade_urban_d_sseldorf-1162464.jpg!d");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #3a86ff;
   box-shadow: 0.5rem 1rem 1rem #3885ff; }
+  @media (min-width: 64em) {
+    .section__slider {
+      flex: 0 0 45%;
+      margin-top: 0;
+      margin-left: 3rem; } }
+  @media (min-width: 90em) {
+    .section__slider {
+      flex: 0 0 20%;
+      margin-top: 0;
+      margin-left: 3rem; } }
 
 .section__lightbox {
+  height: 90vh;
   margin-top: 3rem; }
+  @media (min-width: 64em) {
+    .section__lightbox {
+      flex: 0 0 45%; } }
+  @media (min-width: 90em) {
+    .section__lightbox {
+      flex: 0 0 20%;
+      margin-top: 0;
+      margin-left: 3rem; } }
+
+.section__carusel {
+  margin-top: 3rem;
+  height: 90vh; }
+  @media (min-width: 64em) {
+    .section__carusel {
+      flex: 0 0 45%;
+      margin-left: 3rem; } }
+  @media (min-width: 90em) {
+    .section__carusel {
+      flex: 0 0 20%;
+      margin-top: 0; } }

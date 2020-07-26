@@ -1,17 +1,37 @@
 .lightbox {
 
+    height: 100%;
     position: relative;
-    height: $main-height;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
     background-color: $color-grey;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: row;
+    }
+    @include respond(standart-screen) {
+        flex-direction: column;
+    }
 
     &__header {
-        text-align: left;
-        font-size: $font-size-big;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 100;
         margin: 3rem;
         color: $color-granate;
+
+        @include respond(smartphone) {
+            font-size: 4rem;
+        }
+        @include respond(tab-land) {
+            font-size: 3rem;
+        }
+        
     }
 
     &__btn:link,
@@ -23,15 +43,39 @@
         margin: 0 auto;
     }
     &__box {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
 
-        display: flex;
-        flex-wrap: wrap;
+        @include respond(smartphone) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @include respond(tab-port) {
+            align-items: center;
+            justify-content: center;
+        }
+        &-item {
+            flex: 0 0 30%;
+        }
     }
     &__img {
+        
+        width: 80%;
         cursor: pointer;
-        width: 50%;
-        height: 100%;
-        border: 1.5rem solid $color-grey;
+        background-position: center;
+        background-size: 100%;
+
+        @include respond(smartphone) {
+            max-height: auto;
+            margin: 3rem;
+        }
+        @include respond(tab-port) {
+           margin: .5rem;
+        }
 
         &-popup {
             width: 100%;
@@ -47,7 +91,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba($color-blue, .7);
+        background-color: rgba($color-granate, .9);
 
         &-box{
             height: 100%;
@@ -55,6 +99,8 @@
             flex-direction: column;
         }
         &-screen {
+            background-position: center;
+            background-size: 100%;
             margin: 2rem;
         }
         &-queue {
@@ -62,7 +108,6 @@
 
             display: flex;
             justify-content: space-between;
-            // align-items: flex-end;
 
             &--el {
                 margin: 0 1rem;

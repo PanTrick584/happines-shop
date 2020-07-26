@@ -9,15 +9,31 @@
     flex-direction: column;
     justify-content: space-between;
 
-    &__container{        
-        margin: 3rem;
+    @include respond(tab-land) {
+        flex: 0 0 45%;
+    }
+    @include respond(standart-screen) {
+        flex: 0 0 20%;
+    }
 
-        display: flex;
-        justify-content: space-between;
+    &__container{        
+       margin: 2rem;
+
+       @include respond(tab-port) {
+           margin: 3.5rem;
+       }
     }
     &__h1 {
-        width: 50%;
-        height: 100%;
+        font-size: 3rem;
+        font-weight: 100;
+
+        @include respond(tab-port) {
+           width: 80%;
+        }
+        @include respond(tab-land) {
+           width: 60%;
+           font-size: 3rem;
+        }
     }
 
     &__ul {
@@ -25,36 +41,42 @@
         list-style: none;
 
         display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
+        justify-content: center;
+
+        @include respond(smartphone) {
+            justify-content: left;
+        }
     }
 
     &__li {
-        padding: 1rem;
+        padding: .5rem;
         margin: .5rem;
-        border: 5px solid $color-granate;
+        border: 2px solid $color-granate;
         cursor: pointer;
     }
 
     &__link {
         
-
+        
         &-icon {
-            width: 3rem;
-            height: 3rem;
+            height: 1.5rem;
+            width: 1.5rem;
             fill: $color-granate;
         }
     }
-
     
-
     &__picture{
-        height: 40%;
+        height: 50%;
         border: 3px solid $color-granate;
-        margin: $margin-small;
-        // filter: grayscale(100%);
+        margin: 2rem;
+
         background-image: linear-gradient(rgba($color-granate, 0.8), rgba($color-granate, 0.8)), url("https://c.pxhere.com/photos/28/c1/friends_comfort_care_cheer_up_soothe_friendship_depression_soothing-922392.jpg!d");
         background-size: cover;
+        background-position: bottom;
         background-repeat: no-repeat;
+
+        @include respond(tab-port) {
+            margin: 3.5rem;
+        }
     }
 }
