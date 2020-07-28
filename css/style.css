@@ -61,11 +61,12 @@ body {
     font-weight: 100; }
     @media (min-width: 39.1em) {
       .header__h1 {
+        font-size: 2rem;
         width: 80%; } }
     @media (min-width: 64em) {
       .header__h1 {
-        width: 60%;
-        font-size: 3rem; } }
+        width: 80%;
+        font-size: 2rem; } }
   .header__ul {
     padding-top: 2rem;
     list-style: none;
@@ -84,7 +85,7 @@ body {
     width: 1.5rem;
     fill: #8338ec; }
   .header__picture {
-    height: 50%;
+    height: 100%;
     border: 3px solid #8338ec;
     margin: 2rem;
     background-image: linear-gradient(rgba(131, 56, 236, 0.8), rgba(131, 56, 236, 0.8)), url("https://c.pxhere.com/photos/28/c1/friends_comfort_care_cheer_up_soothe_friendship_depression_soothing-922392.jpg!d");
@@ -125,7 +126,7 @@ body {
         line-height: 8rem; } }
     @media (min-width: 90em) {
       .slider__text {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 6rem; } }
   .slider__btn {
     justify-self: right;

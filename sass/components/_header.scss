@@ -17,8 +17,8 @@
     }
 
     &__container{   
-        height:50%;     
-       margin: 2rem;
+        height: 50%;     
+        margin: 2rem;
 
        @include respond(tab-port) {
            margin: 3.5rem;
@@ -29,11 +29,12 @@
         font-weight: 100;
 
         @include respond(tab-port) {
+            font-size: 2rem;
            width: 80%;
         }
         @include respond(tab-land) {
-           width: 60%;
-           font-size: 3rem;
+           width: 80%;
+           font-size: 2rem;
         }
     }
 
@@ -67,7 +68,7 @@
     }
     
     &__picture{
-        height: 50%;
+        height: 100%;
         border: 3px solid $color-granate;
         margin: 2rem;
 
