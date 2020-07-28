@@ -16,7 +16,8 @@
         flex: 0 0 20%;
     }
 
-    &__container{        
+    &__container{   
+        height:50%;     
        margin: 2rem;
 
        @include respond(tab-port) {
@@ -76,6 +77,11 @@
         background-repeat: no-repeat;
 
         @include respond(tab-port) {
+            margin: 3.5rem;
+            background-size: contain;
+        }
+        @include respond(tab-land) {
+            background-size: cover;
             margin: 3.5rem;
         }
     }

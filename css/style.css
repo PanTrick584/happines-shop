@@ -51,6 +51,7 @@ body {
     .header {
       flex: 0 0 20%; } }
   .header__container {
+    height: 50%;
     margin: 2rem; }
     @media (min-width: 39.1em) {
       .header__container {
@@ -92,6 +93,11 @@ body {
     background-repeat: no-repeat; }
     @media (min-width: 39.1em) {
       .header__picture {
+        margin: 3.5rem;
+        background-size: contain; } }
+    @media (min-width: 64em) {
+      .header__picture {
+        background-size: cover;
         margin: 3.5rem; } }
 
 .slider {
