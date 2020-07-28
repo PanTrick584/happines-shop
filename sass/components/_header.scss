@@ -29,12 +29,12 @@
         font-weight: 100;
 
         @include respond(tab-port) {
-            font-size: 2rem;
-           width: 80%;
+            font-size: 4rem;
+            width: 80%;
         }
         @include respond(tab-land) {
            width: 80%;
-           font-size: 2rem;
+           font-size: 3rem;
         }
     }
 

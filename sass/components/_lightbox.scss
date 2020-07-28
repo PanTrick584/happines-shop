@@ -67,18 +67,15 @@
         width: 80%;
         cursor: pointer;
         background-position: center;
-        background-size: 100%;
 
         @include respond(smartphone) {
-            max-height: auto;
-            margin: 3rem;
+
         }
         @include respond(tab-port) {
            margin: .5rem;
         }
 
         &-popup {
-            width: 100%;
             border: none;
         }
         &-cursor {
@@ -100,29 +97,44 @@
         }
         &-screen {
             background-position: center;
-            background-size: 100%;
-            margin: 2rem;
+            margin: 1rem;
+
+            @include respond(smartphone) {
+                width: 100%;
+            }
+            @include respond(tab-port) {
+               margin: .5rem;
+            }
         }
         &-queue {
-            margin: 2rem;
-
+            margin: 1rem;
             display: flex;
             justify-content: space-between;
 
+            @include respond(smartphone) {
+            }
+            @include respond(tab-port) {
+               margin: .5rem;
+            }
+
             &--el {
-                margin: 0 1rem;
+                // margin: 0 1rem;
             }
         }
 
     }
 
     &__button {
+        z-index: 10;
         position: absolute;
         cursor: pointer;
-        top: 3rem;
-        right: 3rem;
-        width: 5rem;
-        height: 5rem;
+        top: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: $color-granate;
+        outline: none;
+        border: 1px solid $color-yellow;
 
         // &-span {
         //     position: absolute;
